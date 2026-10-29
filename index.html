@@ -251,8 +251,25 @@
 
   .facts .open { display: inline-flex; }
 
+  .kort-actions { margin-top: 30px; }
+
+  a.button {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ground);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 14px 32px;
+  }
+
+  a.button:hover { color: var(--ground); background: var(--accent); border-color: var(--accent); }
+
   .agenda {
-    margin-top: 26px;
+    margin-top: 18px;
     font-size: 14.5px;
     color: var(--ink-soft);
   }
@@ -675,21 +692,11 @@
       <dt>Inloop</dt>
       <dd>Daggasten vanaf 15:00<br>Avondgasten vanaf 20:30</dd>
 
-      <dt>Ceremonie</dt>
-      <dd>15:30</dd>
-
-      <dt>Diner</dt>
-      <dd>18:00 tot 20:00</dd>
-
-      <dt>Feest</dt>
-      <dd>Van 20:30 tot 01:00</dd>
-
-      <dt>Dresscode</dt>
-      <dd>Chic, op je eigen manier</dd>
-
-      <dt>Laat het weten</dt>
-      <dd><a href="#rsvp">Naar het RSVP-formulier</a></dd>
     </dl>
+
+    <div class="kort-actions">
+      <a class="button" href="#rsvp">Laat weten of je komt</a>
+    </div>
 
     <p class="agenda">
       <a id="cal-google" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Bruiloft%20Niels%20%26%20Annemartijn&amp;dates=20270710T150000%2F20270711T010000&amp;ctz=Europe%2FAmsterdam&amp;location=Fort%20de%20Batterijen%2C%20Overeindseweg%2025%2C%20Nieuwegein" target="_blank" rel="noopener">Zet in je Google-agenda</a>
