@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Zaterdag 10 juli 2027, Fort de Batterijen in Nieuwegein.">
+<meta property="og:title" content="Niels & Annemartijn">
+<meta property="og:description" content="Zaterdag 10 juli 2027 · Fort de Batterijen, Nieuwegein">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/img/fort-luchtfoto.jpg">
+<title>Niels &amp; Annemartijn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Karla:wght@300;400;500;600;700&display=swap">
+<style>
+  /* One light palette on purpose: an invitation should look the same
+     for every guest, whatever their phone is set to. */
+  :root {
+    --ground: #FBFAF6;
+    --tint: #EDF0E7;
+    --surface: #FFFFFF;
+
+    --ink: #29392D;
+    --ink-soft: #64725F;
+    --ink-faint: #9AA694;
+
+    --line: #DEE3D6;
+    --line-soft: #EAEEE3;
+
+    --accent: #937C3C;
+    --accent-soft: #B29A56;
+    --accent-wash: #F6F1E3;
+
+    --open-bg: #FBF3DF;
+    --open-line: #D9BE7A;
+    --open-ink: #7A5B12;
+
+    --serif: "Bodoni Moda", "Didot", "Times New Roman", serif;
+    --sans: "Karla", "Helvetica Neue", Arial, sans-serif;
+
+    --measure: 40rem;
+    --gutter: 22px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--accent-soft); }
+  a:hover { color: var(--accent); }
+
+  .wrap {
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .sprig { display: block; margin-inline: auto; color: var(--accent-soft); }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    background: var(--tint);
+    padding-block: 84px 74px;
+    text-align: center;
+  }
+
+  .masthead .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 30px;
+  }
+
+  .names {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.7rem, 12vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .names .amp {
+    display: block;
+    font-size: 0.4em;
+    font-style: italic;
+    color: var(--accent);
+    margin-block: 10px;
+  }
+
+  .masthead .sprig { margin-top: 28px; }
+
+  .masthead .when {
+    margin: 24px 0 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  /* ---------- sticky navigation ---------- */
+
+  .nav {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 20;
+    background: var(--ground);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding-inline: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-inner::-webkit-scrollbar { display: none; }
+
+  .nav a {
+    flex: none;
+    display: block;
+    padding: 19px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    white-space: nowrap;
+  }
+
+  .nav a:hover { color: var(--ink); }
+  .nav a.current { color: var(--accent); border-bottom-color: var(--accent-soft); }
+  .nav a.cta { color: var(--accent); font-weight: 700; }
+  .nav a.cta.current { border-bottom-color: var(--accent); }
+
+  /* ---------- sections ---------- */
+
+  section {
+    padding-block: 58px;
+    border-bottom: 1px solid var(--line-soft);
+    scroll-margin-top: 72px;
+  }
+
+  section:last-of-type { border-bottom: 0; }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.18;
+    margin: 0 0 26px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---------- open items ---------- */
+
+  /* Small open value inside a sentence. */
+  .tbd {
+    font-style: italic;
+    color: var(--open-ink);
+    background: var(--open-bg);
+    border-bottom: 1px dashed var(--open-line);
+    padding: 0 3px;
+  }
+
+  /* A whole answer that has not been decided yet. */
+  .open {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--open-bg);
+    border: 1px dashed var(--open-line);
+    color: var(--open-ink);
+    padding: 10px 14px;
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .chip {
+    flex: none;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--open-line);
+    color: #FFFFFF;
+    padding: 3px 7px 2px;
+    margin-top: 2px;
+  }
+
+  /* ---------- key facts ---------- */
+
+  .facts {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    margin: 0;
+  }
+
+  .facts dt {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-block: 16px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .facts dd {
+    margin: 0;
+    padding-block: 16px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .facts dt:first-child,
+  .facts dt:first-child + dd { border-top: 0; padding-top: 0; }
+
+  .facts .open { display: inline-flex; }
+
+  .agenda {
+    margin-top: 26px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 470px) {
+    .facts { grid-template-columns: 1fr; }
+    .facts dt { padding-block: 16px 0; }
+    .facts dd { padding-top: 2px; border-top: 0; }
+    .facts dt:first-child + dd { padding-top: 2px; }
+  }
+
+  /* ---------- programme ---------- */
+
+  .programme {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0 22px;
+  }
+
+  .programme .time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--accent);
+    padding-block: 18px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .programme .item {
+    padding-block: 18px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .programme .item strong { display: block; font-weight: 600; }
+
+  .programme .time:first-child,
+  .programme .time:first-child + .item { border-top: 0; padding-top: 0; }
+
+  @media (max-width: 470px) {
+    .programme { grid-template-columns: 1fr; }
+    .programme .time { padding-block: 18px 0; }
+    .programme .item { padding-top: 2px; border-top: 0; }
+    .programme .time:first-child + .item { padding-top: 2px; }
+  }
+
+  /* ---------- carousel ---------- */
+
+  .carousel { margin-block: 0 8px; }
+
+  .carousel-track {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding-inline: max(var(--gutter), calc((100% - var(--measure)) / 2));
+    padding-block: 2px;
+  }
+
+  .carousel-track::-webkit-scrollbar { display: none; }
+
+  .shot {
+    flex: none;
+    width: clamp(260px, 78vw, 420px);
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  .shot img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--tint);
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .carousel-controls button {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--ground);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .carousel-controls button:hover { border-color: var(--accent-soft); color: var(--accent); }
+  .carousel-controls button[disabled] { opacity: 0.35; cursor: default; }
+  .carousel-controls button[disabled]:hover { border-color: var(--line); color: var(--ink-soft); }
+
+  /* ---------- location ---------- */
+
+  .where {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 22px;
+    align-items: stretch;
+    margin-top: 34px;
+  }
+
+  @media (max-width: 600px) {
+    .where { grid-template-columns: 1fr; }
+  }
+
+  .map {
+    position: relative;
+    min-height: 240px;
+    max-width: 100%;
+    border: 1px solid var(--line);
+    background: var(--tint);
+    overflow: hidden;
+  }
+
+  .map iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .map-fallback {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    gap: 8px;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  .map-fallback svg { margin-inline: auto; color: var(--accent-soft); }
+
+  .links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14.5px; margin-top: 10px; }
+
+  .blocks { display: grid; gap: 28px; margin-top: 34px; }
+  .block p { font-size: 15px; }
+
+  .hotels {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .hotels li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-block: 7px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .hotels li:first-child { border-top: 0; }
+  .hotels .dist { color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* ---------- dresscode ---------- */
+
+  .dress-line {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.35;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+
+  /* ---------- faq ---------- */
+
+  .faq { margin: 0; }
+  .faq dt { font-weight: 600; margin-top: 22px; }
+  .faq dt:first-child { margin-top: 0; }
+  .faq dd { margin: 4px 0 0; color: var(--ink-soft); font-size: 15px; }
+
+  /* ---------- rsvp ---------- */
+
+  .rsvp-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 30px 24px;
+  }
+
+  .field { margin-bottom: 24px; }
+  .field:last-of-type { margin-bottom: 0; }
+  .field[hidden] { display: none !important; }
+
+  .q {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 9px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 11px 13px;
+  }
+
+  input[type="number"] { max-width: 8rem; }
+  input::placeholder, textarea::placeholder { color: var(--ink-faint); }
+  textarea { min-height: 78px; resize: vertical; }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Choice cards: plainly empty until picked, solid once picked. */
+  .choices { display: grid; gap: 10px; }
+
+  @media (min-width: 520px) {
+    .choices { grid-template-columns: 1fr 1fr; }
+  }
+
+  .choice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.35;
+    cursor: pointer;
+  }
+
+  .choice input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+
+  .choice .dot {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--ink-faint);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+
+  .choice .dot::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .choice small { display: block; font-size: 13px; color: var(--ink-faint); }
+
+  .choice:hover { border-color: var(--ink-soft); }
+
+  .choice:has(input:checked) {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--ground);
+  }
+
+  .choice:has(input:checked) small { color: var(--tint); }
+  .choice:has(input:checked) .dot { border-color: var(--ground); }
+  .choice:has(input:checked) .dot::after { background: var(--ground); }
+  .choice:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .form-error {
+    margin-top: 14px;
+    color: #9A3B2B;
+    font-size: 14px;
+  }
+
+  button.submit {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ground);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 14px 32px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+
+  button.submit:hover { background: var(--accent); border-color: var(--accent); }
+  button.submit[disabled] { opacity: 0.6; cursor: progress; }
+
+  .confirm {
+    border: 1px solid var(--accent-soft);
+    background: var(--accent-wash);
+    padding: 26px 24px;
+    text-align: center;
+  }
+
+  .confirm .sprig { margin-bottom: 14px; }
+  .confirm p { font-size: 15px; }
+
+  .confirm button {
+    font-family: var(--sans);
+    font-size: 13px;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--accent-soft);
+    color: var(--ink-soft);
+    padding: 0 0 1px;
+    cursor: pointer;
+  }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    background: var(--tint);
+    color: var(--ink-soft);
+    padding-block: 46px;
+    text-align: center;
+    font-size: 14.5px;
+  }
+
+  footer .sprig { margin-bottom: 18px; }
+
+  footer .sign {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html, .carousel-track { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Wij gaan het vieren</p>
+    <h1 class="names">Niels<span class="amp">&amp;</span>Annemartijn</h1>
+    <svg class="sprig" width="150" height="18" viewBox="0 0 150 18" fill="none" aria-hidden="true">
+      <path d="M0 9h58M92 9h58" stroke="currentColor" stroke-width="1"></path>
+      <path d="M75 2.5 L79 9 L75 15.5 L71 9 Z" fill="currentColor"></path>
+      <ellipse cx="0" cy="0" rx="7.5" ry="3" fill="currentColor" opacity="0.75" transform="translate(63 9) rotate(-24)"></ellipse>
+      <ellipse cx="0" cy="0" rx="7.5" ry="3" fill="currentColor" opacity="0.75" transform="translate(87 9) rotate(24)"></ellipse>
+    </svg>
+    <p class="when">Zaterdag 10 juli 2027 &middot; Fort de Batterijen, Nieuwegein</p>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Op deze pagina">
+  <div class="nav-inner">
+    <a href="#in-het-kort">In het kort</a>
+    <a href="#programma">Programma</a>
+    <a href="#locatie">Locatie</a>
+    <a href="#dresscode">Dresscode</a>
+    <a href="#faq">FAQ</a>
+    <a href="#rsvp" class="cta">RSVP</a>
+  </div>
+</nav>
+
+<section id="in-het-kort">
+  <div class="wrap">
+    <h2>In het kort</h2>
+
+    <dl class="facts">
+      <dt>Datum</dt>
+      <dd>Zaterdag 10 juli 2027</dd>
+
+      <dt>Locatie</dt>
+      <dd>Fort de Batterijen, Overeindseweg 25, Nieuwegein</dd>
+
+      <dt>Inloop</dt>
+      <dd>Daggasten vanaf 15:00<br>Avondgasten vanaf 20:30</dd>
+
+      <dt>Ceremonie</dt>
+      <dd>15:30, buiten. Geen ambtenaar: iemand uit onze eigen kring leidt de ceremonie.</dd>
+
+      <dt>Diner</dt>
+      <dd>18:00 tot 20:00, voor de daggasten</dd>
+
+      <dt>Feest</dt>
+      <dd>Van 20:30 tot 01:00</dd>
+
+      <dt>Dresscode</dt>
+      <dd>Chic, op je eigen manier</dd>
+
+      <dt>Laat het weten</dt>
+      <dd>Via het formulier onderaan, uiterlijk <span class="tbd">datum volgt</span></dd>
+    </dl>
+
+    <p class="agenda">
+      <a id="cal-google" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Bruiloft%20Niels%20%26%20Annemartijn&amp;dates=20270710T150000%2F20270711T010000&amp;ctz=Europe%2FAmsterdam&amp;location=Fort%20de%20Batterijen%2C%20Overeindseweg%2025%2C%20Nieuwegein" target="_blank" rel="noopener">Zet in je Google-agenda</a>
+      &middot;
+      <a id="cal-ics" href="bruiloft.ics">Apple of Outlook</a>
+    </p>
+  </div>
+</section>
+
+<section id="programma">
+  <div class="wrap">
+    <h2>Het programma</h2>
+
+    <div class="programme">
+      <div class="time">15:00</div>
+      <div class="item">
+        <strong>Ontvangst</strong>
+      </div>
+
+      <div class="time">15:30</div>
+      <div class="item">
+        <strong>Ceremonie</strong>
+      </div>
+
+      <div class="time">16:30</div>
+      <div class="item">
+        <strong>Borrel</strong>
+      </div>
+
+      <div class="time">18:00</div>
+      <div class="item">
+        <strong>Diner</strong>
+      </div>
+
+      <div class="time">20:30</div>
+      <div class="item">
+        <strong>Feest</strong>
+      </div>
+
+      <div class="time">01:00</div>
+      <div class="item">
+        <strong>Einde</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie">
+  <div class="wrap">
+    <h2>De locatie</h2>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track" tabindex="0" role="group" aria-label="Foto's van Fort de Batterijen">
+      <figure class="shot">
+        <img src="img/fort-luchtfoto.jpg" alt="Fort de Batterijen van bovenaf, een groen eiland omringd door water" loading="lazy" width="960" height="720">
+      </figure>
+      <figure class="shot">
+        <img src="img/ceremonie.jpg" alt="Een ceremonie op het gras onder hoge bomen, met stoelen aan weerszijden van een wit pad" loading="lazy" width="960" height="720">
+      </figure>
+      <figure class="shot">
+        <img src="img/tent.jpg" alt="Een witte tent met lange tafels op het grasveld tussen de bomen" loading="lazy" width="960" height="720">
+      </figure>
+      <figure class="shot">
+        <img src="img/rode-deuren.jpg" alt="Een begroeide bunker met rode deuren, met tafels en parasols ervoor" loading="lazy" width="960" height="720">
+      </figure>
+      <figure class="shot">
+        <img src="img/wal.jpg" alt="De wal van het fort met de letters De Batterijen in het gras" loading="lazy" width="960" height="720">
+      </figure>
+    </div>
+
+    <div class="wrap">
+      <div class="carousel-controls">
+        <button type="button" data-dir="-1" aria-label="Vorige foto">&#8592;</button>
+        <button type="button" data-dir="1" aria-label="Volgende foto">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="where">
+      <div class="block">
+        <h3>Adres</h3>
+        <p>Fort de Batterijen<br>Overeindseweg 25<br>3439 LP Nieuwegein</p>
+        <div class="links">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Fort+de+Batterijen%2C+Overeindseweg+25%2C+3439+LP+Nieuwegein" target="_blank" rel="noopener">Route plannen</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Fort+de+Batterijen%2C+Overeindseweg+25%2C+3439+LP+Nieuwegein" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+
+      <div class="map">
+        <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&amp;query=Fort+de+Batterijen%2C+Overeindseweg+25%2C+3439+LP+Nieuwegein" target="_blank" rel="noopener">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"></path><circle cx="12" cy="10" r="2.3"></circle></svg>
+          <span>Bekijk de kaart</span>
+        </a>
+        <iframe src="https://www.google.com/maps?q=Fort+de+Batterijen,+Overeindseweg+25,+3439+LP+Nieuwegein&amp;z=14&amp;output=embed" title="Kaart van Fort de Batterijen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="blocks">
+      <div class="block">
+        <h3>Met de auto</h3>
+        <p>Parkeren is gratis, op het terrein van het fort zelf.</p>
+      </div>
+
+      <div class="block">
+        <h3>Met het openbaar vervoer</h3>
+        <p>Kom je met de trein, huur dan een OV-fiets op Utrecht Centraal. Het is zo'n 25 minuten fietsen naar het fort, 7,8 kilometer.</p>
+        <p>Met de bus: neem bij Utrecht Centraal (Jaarbeurszijde) bus 47 richting Houten en stap uit bij Houten, Koppeldijk. Vanaf daar is het nog 1,4 kilometer lopen.</p>
+      </div>
+
+      <div class="block">
+        <h3>Blijven slapen</h3>
+        <p>Op het fort zelf kun je niet overnachten. Hotels in de buurt, met de afstand over de weg vanaf het fort:</p>
+        <ul class="hotels">
+          <li><span>Van der Valk Hotel Utrecht</span><span class="dist">4,9 km</span></li>
+          <li><span>Van der Valk Hotel Houten</span><span class="dist">5,2 km</span></li>
+          <li><span>Fletcher Hotel Nieuwegein-Utrecht</span><span class="dist">7,2 km</span></li>
+          <li><span>Hajé Hotel Nieuwegein</span><span class="dist">7,9 km</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dresscode">
+  <div class="wrap">
+    <h2>Dresscode</h2>
+    <p class="dress-line">Chic, op je eigen manier.</p>
+    <p>Doe er een beetje je best voor: kleed je net wat chiquer dan normaal, in iets waar je je goed in voelt.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Goed om te weten</h2>
+
+    <dl class="faq">
+      <dt>Mag ik iemand meenemen?</dt>
+      <dd><div class="open"><span class="chip">Nog open</span><span>Op de uitnodiging staat voor hoeveel personen die geldt.</span></div></dd>
+
+      <dt>Zijn kinderen welkom?</dt>
+      <dd>Nee, de bruiloft is zonder kinderen.</dd>
+
+      <dt>Wat willen jullie als cadeau?</dt>
+      <dd><div class="open"><span class="chip">Nog open</span><span>Hier volgt nog een antwoord.</span></div></dd>
+
+      <dt>Ik wil graag een speech houden.</dt>
+      <dd>Graag, maar er is beperkt ruimte in het programma. Laat het even weten aan de ceremoniemeesters: <span class="tbd">namen en nummers volgen</span>.</dd>
+
+      <dt>Ik drink geen alcohol.</dt>
+      <dd>Geen probleem: er is alcoholvrij bier en alcoholvrije wijn.</dd>
+
+      <dt>Mag ik foto's maken?</dt>
+      <dd>Ja, graag. Alleen tijdens de ceremonie niet.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="rsvp">
+  <div class="wrap">
+    <h2>Laat weten of je komt</h2>
+
+    <form class="rsvp-card" id="rsvp-form" novalidate>
+      <div class="field">
+        <label class="q" for="rsvp-naam">Naam</label>
+        <input type="text" id="rsvp-naam" name="naam" autocomplete="name" placeholder="Jouw naam, en die van je partner als jullie samen komen" required>
+      </div>
+
+      <div class="field">
+        <span class="q" id="rsvp-komt-label">Kom je?</span>
+        <div class="choices" role="radiogroup" aria-labelledby="rsvp-komt-label">
+          <label class="choice"><input type="radio" name="komt" id="rsvp-komt-ja" value="ja" required><span class="dot"></span><span>Ja, ik ben erbij</span></label>
+          <label class="choice"><input type="radio" name="komt" id="rsvp-komt-nee" value="nee"><span class="dot"></span><span>Nee, helaas niet</span></label>
+        </div>
+      </div>
+
+      <div class="field" id="field-aantal" hidden>
+        <label class="q" for="rsvp-aantal">Met hoeveel personen</label>
+        <input type="number" id="rsvp-aantal" name="aantal" min="1" max="6" value="1" inputmode="numeric">
+      </div>
+
+      <div class="field" id="field-deel" hidden>
+        <span class="q" id="rsvp-deel-label">Je bent uitgenodigd voor</span>
+        <div class="choices" role="radiogroup" aria-labelledby="rsvp-deel-label">
+          <label class="choice"><input type="radio" name="deel" id="rsvp-deel-dag" value="hele-dag"><span class="dot"></span><span>De hele dag<small>vanaf 15:00</small></span></label>
+          <label class="choice"><input type="radio" name="deel" id="rsvp-deel-avond" value="avond"><span class="dot"></span><span>Het feest<small>vanaf 20:30</small></span></label>
+        </div>
+      </div>
+
+      <div class="field" id="field-dieet" hidden>
+        <label class="q" for="rsvp-dieet">Dieetwensen of allergieën</label>
+        <textarea id="rsvp-dieet" name="dieet" placeholder="Laat leeg als er niets is"></textarea>
+      </div>
+
+      <div class="field" id="field-opmerking" hidden>
+        <label class="q" for="rsvp-opmerking">Nog iets dat we moeten weten?</label>
+        <textarea id="rsvp-opmerking" name="opmerking"></textarea>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="rsvp-website">Website</label>
+        <input type="text" id="rsvp-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button type="submit" class="submit" id="rsvp-submit">Versturen</button>
+      <p class="form-error" id="rsvp-error" role="alert" hidden></p>
+    </form>
+
+    <div class="confirm" id="rsvp-confirm" hidden>
+      <svg class="sprig" width="150" height="18" viewBox="0 0 150 18" fill="none" aria-hidden="true">
+        <path d="M0 9h58M92 9h58" stroke="currentColor" stroke-width="1"></path>
+        <path d="M75 2.5 L79 9 L75 15.5 L71 9 Z" fill="currentColor"></path>
+        <ellipse cx="0" cy="0" rx="7.5" ry="3" fill="currentColor" opacity="0.75" transform="translate(63 9) rotate(-24)"></ellipse>
+        <ellipse cx="0" cy="0" rx="7.5" ry="3" fill="currentColor" opacity="0.75" transform="translate(87 9) rotate(24)"></ellipse>
+      </svg>
+      <h3>Dank je</h3>
+      <p id="rsvp-confirm-text">We hebben je antwoord ontvangen.</p>
+      <p><button type="button" id="rsvp-again">Nog een antwoord invullen</button></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="sprig" width="150" height="18" viewBox="0 0 150 18" fill="none" aria-hidden="true">
+      <path d="M0 9h58M92 9h58" stroke="currentColor" stroke-width="1"></path>
+      <path d="M75 2.5 L79 9 L75 15.5 L71 9 Z" fill="currentColor"></path>
+      <ellipse cx="0" cy="0" rx="7.5" ry="3" fill="currentColor" opacity="0.75" transform="translate(63 9) rotate(-24)"></ellipse>
+      <ellipse cx="0" cy="0" rx="7.5" ry="3" fill="currentColor" opacity="0.75" transform="translate(87 9) rotate(24)"></ellipse>
+    </svg>
+    <p>Vragen? Bel of app de ceremoniemeesters: <span class="tbd">namen en nummers volgen</span></p>
+    <p class="sign">Niels &amp; Annemartijn &middot; 10 juli 2027</p>
+  </div>
+</footer>
+
+<script>
+  /* Where RSVP answers go: the Web app URL of the Apps Script on the
+     "RSVP bruiloft" Google Sheet. Empty means preview mode: the form
+     shows the thank-you message but sends nothing. */
+  var RSVP_ENDPOINT = "";
+
+  (function () {
+    var form = document.getElementById("rsvp-form");
+    var fAantal = document.getElementById("field-aantal");
+    var fDeel = document.getElementById("field-deel");
+    var fDieet = document.getElementById("field-dieet");
+    var fOpm = document.getElementById("field-opmerking");
+    var naam = document.getElementById("rsvp-naam");
+    var submit = document.getElementById("rsvp-submit");
+    var errorBox = document.getElementById("rsvp-error");
+    var confirmBox = document.getElementById("rsvp-confirm");
+    var confirmText = document.getElementById("rsvp-confirm-text");
+    var again = document.getElementById("rsvp-again");
+
+    /* Personal links: ?voor=dag or ?voor=avond fixes the invitation type,
+       ?naam=... fills in the name. */
+    var params = new URLSearchParams(window.location.search);
+    var voor = params.get("voor");
+    var lockedDeel = voor === "dag" ? "hele-dag" : voor === "avond" ? "avond" : null;
+    if (params.get("naam")) naam.value = params.get("naam");
+
+    if (voor === "avond") {
+      var g = document.getElementById("cal-google");
+      g.href = g.href.replace("20270710T150000", "20270710T203000");
+      document.getElementById("cal-ics").href = "bruiloft-avond.ics";
+    }
+
+    function value(name) {
+      var el = form.querySelector('input[name="' + name + '"]:checked');
+      return el ? el.value : "";
+    }
+
+    function sync() {
+      var komt = value("komt");
+      var ja = komt === "ja";
+      if (lockedDeel) {
+        document.querySelector('input[name="deel"][value="' + lockedDeel + '"]').checked = true;
+      }
+      var deel = value("deel");
+      fAantal.hidden = !ja;
+      fDeel.hidden = !ja || !!lockedDeel;
+      fDieet.hidden = !(ja && deel === "hele-dag");
+      fOpm.hidden = !komt;
+      document.getElementById("rsvp-deel-dag").required = ja && !lockedDeel;
+    }
+
+    form.addEventListener("change", sync);
+
+    function showError(msg) {
+      errorBox.textContent = msg;
+      errorBox.hidden = false;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      errorBox.hidden = true;
+
+      var komt = value("komt");
+      var deel = value("deel");
+      if (!naam.value.trim()) { naam.focus(); return showError("Vul je naam in."); }
+      if (!komt) return showError("Laat weten of je komt.");
+      if (komt === "ja" && !deel) return showError("Kies voor welk deel je bent uitgenodigd.");
+
+      var data = {
+        naam: naam.value.trim(),
+        komt: komt,
+        aantal: komt === "ja" ? document.getElementById("rsvp-aantal").value : "",
+        deel: komt === "ja" ? deel : "",
+        dieet: komt === "ja" && deel === "hele-dag" ? document.getElementById("rsvp-dieet").value : "",
+        opmerking: document.getElementById("rsvp-opmerking").value,
+        website: document.getElementById("rsvp-website").value
+      };
+
+      function done() {
+        var voornaam = data.naam.split(" ")[0];
+        confirmText.textContent = komt === "ja"
+          ? "Fijn, " + voornaam + ". We zien je op 10 juli!"
+          : "Jammer, " + voornaam + ", maar dank je voor het laten weten.";
+        form.hidden = true;
+        confirmBox.hidden = false;
+        confirmBox.scrollIntoView({ block: "center", behavior: "smooth" });
+      }
+
+      if (!RSVP_ENDPOINT) return done();
+
+      submit.disabled = true;
+      submit.textContent = "Versturen...";
+      fetch(RSVP_ENDPOINT, { method: "POST", mode: "no-cors", body: new URLSearchParams(data) })
+        .then(done)
+        .catch(function () {
+          showError("Versturen lukte niet. Probeer het nog eens, of app ons even.");
+        })
+        .then(function () {
+          submit.disabled = false;
+          submit.textContent = "Versturen";
+        });
+    });
+
+    again.addEventListener("click", function () {
+      form.reset();
+      if (params.get("naam")) naam.value = params.get("naam");
+      sync();
+      confirmBox.hidden = true;
+      form.hidden = false;
+      naam.focus();
+    });
+
+    sync();
+  })();
+
+  /* Carousel: arrows scroll one photo, and grey out at either end. */
+  (function () {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-carousel]"), function (carousel) {
+      var track = carousel.querySelector(".carousel-track");
+      var buttons = carousel.querySelectorAll(".carousel-controls button");
+
+      function step() {
+        var slide = track.querySelector(".shot");
+        return slide ? slide.getBoundingClientRect().width + 14 : track.clientWidth;
+      }
+
+      function syncButtons() {
+        var max = track.scrollWidth - track.clientWidth - 2;
+        Array.prototype.forEach.call(buttons, function (btn) {
+          var dir = Number(btn.getAttribute("data-dir"));
+          btn.disabled = dir < 0 ? track.scrollLeft <= 2 : track.scrollLeft >= max;
+        });
+      }
+
+      Array.prototype.forEach.call(buttons, function (btn) {
+        btn.addEventListener("click", function () {
+          track.scrollBy({ left: Number(btn.getAttribute("data-dir")) * step(), behavior: "smooth" });
+        });
+      });
+
+      track.addEventListener("scroll", syncButtons, { passive: true });
+      window.addEventListener("resize", syncButtons, { passive: true });
+      syncButtons();
+    });
+  })();
+
+  /* Marks the section you are reading in the sticky nav. */
+  (function () {
+    var targets = Array.prototype.slice.call(document.querySelectorAll(".nav a"))
+      .map(function (a) { return { link: a, el: document.querySelector(a.getAttribute("href")) }; })
+      .filter(function (t) { return t.el; });
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var active = null;
+      targets.forEach(function (t) { if (t.el.getBoundingClientRect().top <= 90) active = t; });
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) active = targets[targets.length - 1];
+      targets.forEach(function (t) { t.link.classList.toggle("current", t === active); });
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
+  })();
+</script>
+</body>
+</html>
